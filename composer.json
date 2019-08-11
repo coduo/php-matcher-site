@@ -5,13 +5,18 @@
         "php": "^7.1.3",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "coduo/php-matcher": "^3.2",
+        "norzechowicz/aceeditor-bundle": "^4.0",
+        "sensio/framework-extra-bundle": "^5.4",
         "symfony/console": "4.3.*",
         "symfony/dotenv": "4.3.*",
         "symfony/flex": "^1.3.1",
         "symfony/framework-bundle": "4.3.*",
+        "symfony/twig-bundle": "4.3.*",
         "symfony/yaml": "4.3.*"
     },
     "require-dev": {
+        "symfony/maker-bundle": "^1.12"
     },
     "config": {
         "preferred-install": {

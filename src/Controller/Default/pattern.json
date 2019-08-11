@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "firstName": "@string@",
+      "lastName": "@string@",
+      "title": "@string@",
+      "created": "@string@.isDateTime()",
+      "roles": "@array@.isNotEmpty().inArray(\"ROLE_USER\")"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "firstName": "Norbert",
+      "lastName": "Orzechowicz",
+      "title": "Software Architect",
+      "created": "2014-01-01",
+      "roles":["ROLE_USER", "ROLE_DEVELOPER"]
+    }
+  ]
+}

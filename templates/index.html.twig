@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+<div class="row">
+    <div class="col-md-12">
+    <p>
+        Matcher is simple php library created to match values against patterns. It's mostly used for API's functional
+        tests where JSON response needs to be compared against pattern with some placeholders.
+    </p>
+    <p>
+        This website is a sandbox for the library, give it a try:
+    </p>
+    </div>
+</div>
+
+{% if match is not null %}
+    {% if match %}
+        <div class="alert alert-success" role="alert">
+            Value match pattern!
+        </div>
+    {% else %}
+        <div class="alert alert-danger" role="alert">
+            Value does not match pattern. <br/>
+            <code>
+                {{ matchingError }}
+            </code>
+        </div>
+    {% endif %}
+{% endif %}
+
+{{ form_start(form) }}
+<div class="row">
+    <div class="col-md-6">
+        <h5>Value</h5>
+        {{ form_row(form.value, {label: false}) }}
+    </div>
+    <div class="col-md-6">
+        <h5>Pattern</h5>
+        {{ form_row(form.pattern, {label: false}) }}
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+    <div class="form-group">
+        {{ form_widget(form.match) }}
+        <a class="btn-secondary btn" href="{{ url('home') }}">Reset</a>
+    </div>
+    </div>
+</div>
+{{ form_end(form) }}
+
+<h3>Ports for other languages</h3>
+<ul>
+    <li><a href="https://github.com/defrag/NMatcher" target="_blank">.NET - NMatcher</a></li>
+</ul>
+
+{% endblock %}
