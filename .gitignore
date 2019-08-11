@@ -1,3 +1,4 @@
+/composer.phar
 /.env
 ###> symfony/framework-bundle ###
 /.env.local
