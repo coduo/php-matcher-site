@@ -1,0 +1,13 @@
+app_insights_php:
+  enabled: true
+  instrumentation_key: "%env(APPINSIGHTS_INSTRUMENTATIONKEY)%"
+  exceptions:
+    enabled: true
+    ignored_exceptions:
+      - 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException'
+  dependencies:
+    enabled: true
+  requests:
+    enabled: true
+  traces:
+    enabled: true

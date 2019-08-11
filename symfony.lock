@@ -1,4 +1,13 @@
 {
+    "app-insights-php/app-insights-php-bundle": {
+        "version": "0.2.1"
+    },
+    "app-insights-php/client": {
+        "version": "0.2.2"
+    },
+    "app-insights-php/monolog-handler": {
+        "version": "0.2.0"
+    },
     "coduo/php-matcher": {
         "version": "3.2.2"
     },
@@ -38,6 +47,21 @@
     "doctrine/reflection": {
         "version": "v1.0.0"
     },
+    "guzzlehttp/guzzle": {
+        "version": "6.3.3"
+    },
+    "guzzlehttp/promises": {
+        "version": "v1.3.1"
+    },
+    "guzzlehttp/psr7": {
+        "version": "1.6.1"
+    },
+    "microsoft/application-insights": {
+        "version": "0.4.5"
+    },
+    "monolog/monolog": {
+        "version": "1.24.0"
+    },
     "nikic/php-parser": {
         "version": "v4.2.2"
     },
@@ -53,8 +77,17 @@
     "psr/container": {
         "version": "1.0.0"
     },
+    "psr/http-message": {
+        "version": "1.0.1"
+    },
     "psr/log": {
         "version": "1.1.0"
+    },
+    "psr/simple-cache": {
+        "version": "1.0.1"
+    },
+    "ralouphie/getallheaders": {
+        "version": "3.0.3"
     },
     "sensio/framework-extra-bundle": {
         "version": "5.2",
