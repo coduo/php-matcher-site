@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use Coduo\PHPMatcher\Factory\SimpleFactory;
+use Coduo\PHPMatcher\PHPMatcher;
 use Norzechowicz\AceEditorBundle\Form\Extension\AceEditor\Type\AceEditorType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -28,21 +28,18 @@ class PHPMatcherController extends AbstractController
             ->getForm();
 
         $match = null;
-        $matchingError = null;
-        $matcher = (new SimpleFactory())->createMatcher();
+        $matcher = new PHPMatcher();
 
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $match = $matcher->match($form->get('value')->getData(), $form->get('pattern')->getData());
-
-            $matchingError = $matcher->getError();
         }
 
         return $this->render('index.html.twig', [
             'form' => $form->createView(),
             'match' => $match,
-            'matchingError' => $matchingError
+            'matcher' => $matcher
         ]);
     }
 }

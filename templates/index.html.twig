@@ -6,8 +6,8 @@
 <div class="row">
     <div class="col-md-12">
     <p>
-        Matcher is simple php library created to match values against patterns. It's mostly used for API's functional
-        tests where JSON response needs to be compared against pattern with some placeholders.
+        PHPMatcher is a simple php library created to match values against patterns. It's mostly used for API's functional
+        tests where response needs to be compared against patterns with placeholders for variables.
     </p>
     <p>
         This website is a sandbox for the library, give it a try:
@@ -24,7 +24,7 @@
         <div class="alert alert-danger" role="alert">
             Value does not match pattern. <br/>
             <code>
-                {{ matchingError }}
+                {{ matcher.error }}
             </code>
         </div>
     {% endif %}
@@ -51,10 +51,19 @@
 </div>
 {{ form_end(form) }}
 
-<h3>Available for languages</h3>
+<h3>Programming Languages</h3>
 <ul>
     <li><a href="https://github.com/coduo/php-matcher" target="_blank">PHP - php-matcher</a></li>
     <li><a href="https://github.com/defrag/NMatcher" target="_blank">.NET - NMatcher</a></li>
 </ul>
+
+{% if match is not null %}
+<h3>Backtrace</h3>
+<div class="row">
+    <div class="col-md-12">
+        <pre class="alert alert-secondary"><code>{{ matcher.backtrace }}</code></pre>
+    </div>
+</div>
+{% endif %}
 
 {% endblock %}
