@@ -6,7 +6,7 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "app-insights-php/app-insights-php-bundle": "^0.2.1",
-        "coduo/php-matcher": "dev-master@dev",
+        "coduo/php-matcher": "^4.0",
         "norzechowicz/aceeditor-bundle": "^4.0",
         "sensio/framework-extra-bundle": "^5.4",
         "symfony/console": "4.4.*",
