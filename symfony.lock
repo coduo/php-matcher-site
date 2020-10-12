@@ -53,9 +53,6 @@
     "norzechowicz/aceeditor-bundle": {
         "version": "4.0.0"
     },
-    "openlss/lib-array2xml": {
-        "version": "1.0.0"
-    },
     "php": {
         "version": "7.3"
     },
