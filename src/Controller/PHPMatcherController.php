@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use Coduo\PHPMatcher\Backtrace\InMemoryBacktrace;
 use Coduo\PHPMatcher\PHPMatcher;
 use Norzechowicz\AceEditorBundle\Form\Extension\AceEditor\Type\AceEditorType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -28,7 +29,7 @@ class PHPMatcherController extends AbstractController
             ->getForm();
 
         $match = null;
-        $matcher = new PHPMatcher();
+        $matcher = new PHPMatcher(new InMemoryBacktrace());
 
         $form->handleRequest($request);
 
