@@ -1,4 +1,7 @@
 {
+    "aeon-php/calendar": {
+        "version": "0.14.0"
+    },
     "app-insights-php/app-insights-php-bundle": {
         "version": "0.2.1"
     },
@@ -116,6 +119,9 @@
     },
     "symfony/dependency-injection": {
         "version": "v4.3.3"
+    },
+    "symfony/deprecation-contracts": {
+        "version": "v2.2.0"
     },
     "symfony/dotenv": {
         "version": "v4.3.3"
