@@ -1,3 +1,0 @@
-app_insights_php:
-  enabled: false
-  instrumentation_key: "%env(APPINSIGHTS_INSTRUMENTATIONKEY)%"

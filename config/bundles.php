@@ -7,5 +7,4 @@ return [
     Symfony\Bundle\TwigBundle\TwigBundle::class => ['all' => true],
     Norzechowicz\AceEditorBundle\NorzechowiczAceEditorBundle::class => ['all' => true],
     Symfony\Bundle\WebServerBundle\WebServerBundle::class => ['dev' => true],
-    AppInsightsPHP\Symfony\AppInsightsPHPBundle\AppInsightsPHPBundle::class => ['all' => true],
 ];

@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use Coduo\PHPMatcher\Backtrace\InMemoryBacktrace;
 use Coduo\PHPMatcher\PHPMatcher;
+use Composer\InstalledVersions;
 use Norzechowicz\AceEditorBundle\Form\Extension\AceEditor\Type\AceEditorType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -37,10 +38,12 @@ class PHPMatcherController extends AbstractController
             $match = $matcher->match($form->get('value')->getData(), $form->get('pattern')->getData());
         }
 
+
         return $this->render('index.html.twig', [
             'form' => $form->createView(),
             'match' => $match,
-            'matcher' => $matcher
+            'matcher' => $matcher,
+            'version' => InstalledVersions::getPrettyVersion('coduo/php-matcher')
         ]);
     }
 }
