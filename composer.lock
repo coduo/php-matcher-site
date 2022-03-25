@@ -4,24 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "10632a184064fe138d0b7d65bab4063f",
+    "content-hash": "186695be0cafef97cff9de1bfa143411",
     "packages": [
         {
             "name": "aeon-php/calendar",
-            "version": "0.16.4",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aeon-php/calendar.git",
-                "reference": "b611c927b616562da537e466607cf8f2c68025f0"
+                "reference": "2b1c9bb578bd3bf9b47f9e7549bcd2a5bf5e4b25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aeon-php/calendar/zipball/b611c927b616562da537e466607cf8f2c68025f0",
-                "reference": "b611c927b616562da537e466607cf8f2c68025f0",
+                "url": "https://api.github.com/repos/aeon-php/calendar/zipball/2b1c9bb578bd3bf9b47f9e7549bcd2a5bf5e4b25",
+                "reference": "2b1c9bb578bd3bf9b47f9e7549bcd2a5bf5e4b25",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.4.2"
+                "php": "^7.4.2 || ~8.0 || ~8.1"
             },
             "require-dev": {
                 "ext-bcmath": "*"
@@ -51,42 +51,35 @@
             ],
             "support": {
                 "issues": "https://github.com/aeon-php/calendar/issues",
-                "source": "https://github.com/aeon-php/calendar/tree/0.16.4"
+                "source": "https://github.com/aeon-php/calendar/tree/1.0.4"
             },
-            "funding": [
-                {
-                    "url": "https://github.com/norberttech",
-                    "type": "github"
-                }
-            ],
-            "time": "2021-04-04T10:39:42+00:00"
+            "time": "2022-01-28T13:12:23+00:00"
         },
         {
             "name": "coduo/php-matcher",
-            "version": "6.0.3",
+            "version": "6.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/coduo/php-matcher.git",
-                "reference": "8d089461a7662013f2c6a638d58c30e9d9d518fc"
+                "reference": "cf14356b50b91bc25230fbeac2a8e3ce5c3822d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/coduo/php-matcher/zipball/8d089461a7662013f2c6a638d58c30e9d9d518fc",
-                "reference": "8d089461a7662013f2c6a638d58c30e9d9d518fc",
+                "url": "https://api.github.com/repos/coduo/php-matcher/zipball/cf14356b50b91bc25230fbeac2a8e3ce5c3822d8",
+                "reference": "cf14356b50b91bc25230fbeac2a8e3ce5c3822d8",
                 "shasum": ""
             },
             "require": {
-                "aeon-php/calendar": "^0.14.0 || ^0.15.0 || ^0.16.0",
+                "aeon-php/calendar": "^0.14.0 || ^0.15.0 || ^0.16.0 || ^0.17.0 || ^0.18.0 || ^1.0",
                 "coduo/php-to-string": "^3",
                 "doctrine/lexer": "^1.0",
                 "ext-filter": "*",
                 "ext-json": "*",
                 "ext-simplexml": "*",
-                "php": ">=7.4"
+                "php": "^7.4.2 || ~8.0 || ~8.1"
             },
             "require-dev": {
                 "openlss/lib-array2xml": "^1.0",
-                "phpunit/phpunit": "^9.4",
                 "symfony/expression-language": "^2.3|^3.0|^4.0|^5.0"
             },
             "suggest": {
@@ -122,9 +115,9 @@
             ],
             "support": {
                 "issues": "https://github.com/coduo/php-matcher/issues",
-                "source": "https://github.com/coduo/php-matcher/tree/6.0.3"
+                "source": "https://github.com/coduo/php-matcher/tree/6.0.8"
             },
-            "time": "2021-02-25T19:17:51+00:00"
+            "time": "2022-03-25T06:50:36+00:00"
         },
         {
             "name": "coduo/php-to-string",
@@ -4485,7 +4478,8 @@
     "platform": {
         "php": "^7.4.2",
         "ext-ctype": "*",
-        "ext-iconv": "*"
+        "ext-iconv": "*",
+        "ext-zlib": "*"
     },
     "platform-dev": [],
     "plugin-api-version": "2.2.0"
