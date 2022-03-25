@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Controller\Form\MatcherForm;
 use Coduo\PHPMatcher\Backtrace\InMemoryBacktrace;
 use Coduo\PHPMatcher\PHPMatcher;
 use Composer\InstalledVersions;
@@ -19,15 +20,13 @@ class PHPMatcherController extends AbstractController
      */
     public function index(Request $request) : Response
     {
-        $form = $this->createFormBuilder([
+        $form = $this->createForm(
+            MatcherForm::class,
+            [
                 'value' => \file_get_contents(__DIR__.'/Default/value.json'),
                 'pattern' => \file_get_contents(__DIR__.'/Default/pattern.json'),
-            ])
-            ->setMethod('GET')
-            ->add('value', AceEditorType::class, ['height' => 450, 'font_size' => 14,])
-            ->add('pattern', AceEditorType::class, ['height' => 450, 'font_size' => 14,])
-            ->add('match', SubmitType::class, ['label' => 'Match'])
-            ->getForm();
+            ]
+        );
 
         $match = null;
         $matcher = new PHPMatcher(new InMemoryBacktrace());
